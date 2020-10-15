@@ -1,0 +1,11 @@
+<div class="container">
+  <div *ngFor="let photo of photos">
+    <div class="card photo" style="width: 18rem;">
+      <img class="card-img-top" [src]="photo.url" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{photo.title}}</h5>
+        <button [routerLink]="['/photos', photo.id]" class="btn btn-primary">Ver detalles</button>
+      </div>
+    </div>
+  </div>
+</div>
